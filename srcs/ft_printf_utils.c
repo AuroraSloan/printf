@@ -1,6 +1,6 @@
 #include "../includes/ft_printf.h"
 
-int		write_special_zero(int ret, t_info *info)
+int	write_special_zero(int ret, t_info *info)
 {
 	ret += write_symbol(info);
 	if (!info->flag[plus] && !info->flag[space])
@@ -8,12 +8,12 @@ int		write_special_zero(int ret, t_info *info)
 	return (ret);
 }
 
-int		ft_isflag(int c)
+int	ft_isflag(int c)
 {
 	return (c == '-' || c == '0' || c == ' ' || c == '+');
 }
 
-int		ft_istype(int c)
+int	ft_istype(int c)
 {
 	return (c == 'd' || c == 'i' || c == 'u' || c == 's' || c == 'c' ||
 			c == 'x' || c == 'X' || c == 'p' || c == '%' || c == 'n');
@@ -22,8 +22,8 @@ int		ft_istype(int c)
 char	*ft_uitoax(unsigned int n, t_info *info)
 {
 	char	*str;
-	int		len;
-	int		base;
+	int	len;
+	int	base;
 	char	*hex;
 
 	base = info->type == 'x' || info->type == 'X' ? 16 : 10;
@@ -45,7 +45,7 @@ char	*ft_uitoax(unsigned int n, t_info *info)
 char	*ft_ulltox(unsigned long long n)
 {
 	char	*hex;
-	int		len;
+	int	len;
 	char	*str;
 
 	hex = "0123456789abcdef";
