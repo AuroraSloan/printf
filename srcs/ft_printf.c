@@ -58,8 +58,8 @@ static int	parse_conv(int i, const char *fmt, t_info *info, va_list args)
 int			ft_printf(const char *fmt, ...)
 {
 	va_list	args;
-	int		i;
-	int		ret;
+	int	i;
+	int	ret;
 	t_info	info;
 
 	ret = 0;
