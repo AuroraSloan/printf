@@ -22,7 +22,7 @@ static int	set_c_s(int ret, t_info *info, va_list args, char *pad)
 
 static int	set_di(int ret, t_info *info, va_list args, char *pad)
 {
-	int		i;
+	int	i;
 	char	*num;
 
 	i = va_arg(args, int);
@@ -46,7 +46,7 @@ static int	set_di(int ret, t_info *info, va_list args, char *pad)
 
 static int	set_ux(int ret, t_info *info, va_list args, char *pad)
 {
-	int		i;
+	int	i;
 	char	*num;
 
 	i = va_arg(args, int);
@@ -67,7 +67,7 @@ static int	set_ux(int ret, t_info *info, va_list args, char *pad)
 static int	set_p(int ret, t_info *info, va_list args, char *pad)
 {
 	unsigned long long	i;
-	char				*num;
+	char			*num;
 
 	info->flag[plus] = 0;
 	info->flag[space] = 0;
@@ -88,9 +88,9 @@ static int	set_p(int ret, t_info *info, va_list args, char *pad)
 	return (ret);
 }
 
-int			set_conv(int ret, t_info *info, va_list args)
+int		set_conv(int ret, t_info *info, va_list args)
 {
-	char *pad;
+	char	*pad;
 
 	if (info->flag[zero] && info->precision < 0)
 		pad = "0";
