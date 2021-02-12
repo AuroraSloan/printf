@@ -7,9 +7,9 @@ INCS = -I includes/
 OBJS = $(S_PATH:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LIB_DIR = lib/
+LIB_DIR = libft/
 LIBNAME = libft.a
-LIB = lib/libft.a
+LIB = libft/libft.a
 
 all: $(NAME)
 
