@@ -2,7 +2,7 @@
 
 int	write_c(int ret, t_info *info, char c)
 {
-	int		wid_len;
+	int	wid_len;
 	char	*pad;
 
 	if (info->type == '%' && info->flag[zero])
@@ -27,7 +27,7 @@ int	write_c(int ret, t_info *info, char c)
 
 int	write_s(int ret, t_info *info, char *s, char *pad)
 {
-	int len;
+	int	len;
 	int	tmp;
 
 	if (info->precision >= 0 && info->precision < (int)(ft_strlen(s)))
