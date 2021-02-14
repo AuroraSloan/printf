@@ -7,15 +7,15 @@ The only allowed external functions were malloc, free, write, va_start, va_arg, 
 
 ----
 ### Conversions
-|Specifier  |Description|
-|:---------:|-----------|
-|%c         |Character argument is printed.                |
-|%s         |String argument is printed.                   |
-|%p         |Pointer address argument is printed.          |
-|%d %i      |Integer argument is printed.                  |
-|%u         |Unsigned integer is printed.                  |
-|%x         |Hexadecimal is printed with lowercase letters.|
-|%X         |Hexadecimal is printed with uppercase letters.|
+|Specifier  |Description                                                 |
+|:---------:|------------------------------------------------------------|
+|%c         |Character argument is printed.                              |
+|%s         |String argument is printed.                                 |
+|%p         |Address of pointer argument is printed.                     |
+|%d %i      |Integer argument is printed.                                |
+|%u         |Unsigned integer is printed.                                |
+|%x         |Argument is printed as a hexadecimal with lowercase letters.|
+|%X         |Argument is printed as a hexadecimal with uppercase letters.|
 
 ### flags
 |flag       |Description                                                                                                                          |
