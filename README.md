@@ -33,9 +33,9 @@ ft_printf("Hello %13s.\n", "world");
 ```bash
 Hello         world.
 ```
-ft_printf("%*d minutes.\n", 10, 525600);
+ft_printf("%+*d minutes.\n", 10, 525600);
 ```bash 
-0000525600 minutes.
++0000525600 minutes.
 ```
 
 ### Installation
