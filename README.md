@@ -13,7 +13,7 @@ The only allowed external functions were malloc, free, write, va_start, va_arg, 
 |%s         |String argument is printed.                                 |
 |%p         |Address of pointer argument is printed.                     |
 |%d %i      |Integer argument is printed.                                |
-|%u         |Unsigned integer is printed.                                |
+|%u         |Unsigned integer arguments is printed.                      |
 |%x         |Argument is printed as a hexadecimal with lowercase letters.|
 |%X         |Argument is printed as a hexadecimal with uppercase letters.|
 
