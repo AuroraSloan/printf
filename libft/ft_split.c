@@ -1,6 +1,3 @@
-//Allocates and returns an array of strings obtained by splitting 's' using the character 'c' as a delimiter. 
-//The array is ended by a NULL pointer.
-
 #include "libft.h"
 
 static char	**free_err(char **arr, int err_len)
@@ -12,23 +9,6 @@ static char	**free_err(char **arr, int err_len)
 	}
 	free(arr);
 	return (NULL);
-}
-
-static char	*ft_strldup(char const *s_ptr, int l)
-{
-	char	*dst;
-	int	i;
-
-	if (!s_ptr || !(dst = (char*)malloc(sizeof(*dst) * l + 1)))
-		return (NULL);
-	i = 0;
-	while (i < l)
-	{
-		dst[i] = s_ptr[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
 }
 
 static int	word_len(char const *s, char c)
@@ -66,7 +46,10 @@ char	**ft_split(char const *s, char c)
 	int	len;
 	int	j;
 
-	if (!s || !(dst = (char**)malloc(sizeof(char*) * word_count(s, c) + 1)))
+	if (!s)
+		return (NULL);
+	dst = (char **)malloc(sizeof(char *) * word_count(s, c) + 1);
+	if (!dst)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -75,7 +58,8 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		len = word_len(&s[i], c);
-		if (!(dst[j] = ft_strldup(&s[i], len)))
+		dst[j] = ft_strldup(&s[i], len);
+		if (!(dst[j]))
 			return (free_err(dst, j));
 		i = i + len;
 		j++;

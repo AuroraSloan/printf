@@ -1,5 +1,3 @@
-//Outputs the string 's' to the given file descriptor, followed by a new line.
-
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
